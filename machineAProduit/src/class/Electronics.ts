@@ -1,22 +1,22 @@
 import { IProduct } from "../interface/IProduct";
 
-export class Vegetables implements IProduct<number> {
+export class Electronics implements IProduct<number> {
   name: string;
   unitPrice: number;
   quantity: number;
   type: string;
-  categorie: string;
+  marque: string;
 
   constructor(
     name: string,
     unitPrice: number,
     quantity: number,
-    categorie: string
+    marque: string
   ) {
     this.name = name;
     this.unitPrice = unitPrice;
     this.quantity = quantity;
-    this.type = "Legume";
-    this.categorie = categorie;
+    this.type = "Electronique";
+    this.marque = marque;
   }
 }

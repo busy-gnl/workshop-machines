@@ -6,7 +6,7 @@ import { Vegetables } from "./Vegetables";
 // déclarer le totalPrice = 0
 // totalPrice = product.price multiplié par product.quantity
 // retourner le prix total
-export class ProductMachine<T> {
+export class ProductMachine {
   calculateTotalPrice(product: IProduct<number>): number {
     let totalPrice = product.quantity * product.unitPrice;
     return totalPrice;
@@ -15,10 +15,7 @@ export class ProductMachine<T> {
   displayProductDetails(product: IProduct<number>) {
     switch (product.type) {
       case "Fruit":
-        const fruitProduct = product as Fruit & {
-          type: "Fruit";
-          couleur: string;
-        };
+        const fruitProduct = product as Fruit;
         console.log(`
           Nom: ${fruitProduct.name}
           Type: ${fruitProduct.type}
@@ -29,10 +26,7 @@ export class ProductMachine<T> {
         `);
         break;
       case "Legume":
-        const legumeProduct = product as Vegetables & {
-          type: "Legume";
-          categorie: string;
-        };
+        const legumeProduct = product as Vegetables;
         console.log(`
           Nom: ${legumeProduct.name}
           Type: ${legumeProduct.type}
@@ -43,10 +37,7 @@ export class ProductMachine<T> {
         `);
         break;
       case "Electronique":
-        const electronicProduct = product as Electronics & {
-          type: "Electronique";
-          marque: string;
-        };
+        const electronicProduct = product as Electronics;
         console.log(`
           Nom: ${electronicProduct.name}
           Type: ${electronicProduct.type}

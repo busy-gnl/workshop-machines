@@ -1,18 +1,9 @@
 {
-  "name": "machineacompliment",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "dependencies": {
+    "typescript": "^5.1.6"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsc && nodemon dist/index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/node": "^20.4.4",
-    "tsc": "^2.0.4",
-    "nodemon": "^3.0.1",
-    "typescript": "^5.1.6"
+    "start": "npx tsc && node dist/index.js"
   }
 }
